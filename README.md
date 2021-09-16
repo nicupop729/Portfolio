@@ -1,8 +1,8 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Portofolio
+# Portfolio
 
-> This is the personal Portofolio of Nicolae Pop - Web Developer
+> This is the personal Portfolio of Nicolae Pop - Web Developer
 
 ![screenshot](./src/resources/Portofolio-first-page.jpg)
 
@@ -27,7 +27,7 @@ Additional description about the project and its features.
 
 ## Acknowledgments
 
-This Portofolio Project was build using Figma templates under continuous supervision of Microverse team!!
+This Portfolio Project was build using Figma templates under continuous supervision of Microverse team!!
 
 ## 📝 License
 
