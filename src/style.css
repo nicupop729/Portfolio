@@ -9,7 +9,7 @@
 body {
   background-image: url(/src/resources/Header-llustration-desktop.svg);
   background-size: 99vw;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   width: 100vw;
 }
 
@@ -36,12 +36,11 @@ body {
   color: #28352f;
 }
 
-.nav {
-  cursor: pointer;
-}
-
-.menu-icon {
+.menu-button {
   font-size: 2.3em;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
 }
 
 .headline {
