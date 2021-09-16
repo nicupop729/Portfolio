@@ -2,16 +2,17 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Inter;
+  font-family: Inter, sans-serif;
   font-style: normal;
 }
 
 .first-page {
   background-image: url(/src/resources/Header-llustration-desktop.svg);
   background-size: 1480px;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   padding-bottom: 398px;
 }
@@ -47,7 +48,6 @@
   text-decoration: none;
   color: #344563;
   font-size: 15px;
-  line-height: 20px;
   margin: 0px 10px;
   font-weight: 600;
 }
@@ -113,5 +113,5 @@
 }
 
 .arrow-down {
-  margin-top: 20px;
+  margin-top: 30px;
 }
