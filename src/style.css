@@ -40,6 +40,10 @@ body {
   cursor: pointer;
 }
 
+.menu-icon {
+  font-size: 2.3em;
+}
+
 .headline {
   display: flex;
   flex-direction: column;
