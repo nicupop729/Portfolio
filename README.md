@@ -4,7 +4,7 @@
 
 > This is the personal Portofolio of Nicolae Pop - Web Developer
 
-![screenshot](./app_screenshot.png)
+![screenshot](./src/resources/Portofolio-first-page.jpg)
 
 Additional description about the project and its features.
 
