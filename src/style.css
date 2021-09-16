@@ -6,50 +6,38 @@
   font-style: normal;
 }
 
-.first-page {
+body {
   background-image: url(/src/resources/Header-llustration-desktop.svg);
-  background-size: 1480px;
+  background-size: 99vw;
   background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom: 398px;
+  width: 100vw;
 }
 
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  width: 1440px;
+  width: 90vw;
   height: 72px;
-  margin-bottom: 180px;
+  margin: auto auto 180px auto;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-}
-
-.nav-list {
+.header-elem {
   flex: none;
   order: 0;
   flex-grow: 0;
-  text-align: center;
+  margin: 0px 0px;
 }
 
-.nav-link:link,
-.nav-link:visited,
-.nav-link:hover,
-.nav-link:active {
-  text-decoration: none;
-  color: #344563;
-  font-size: 15px;
-  margin: 0 10px;
+.welcome {
   font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  color: #28352f;
+}
+
+.nav {
+  cursor: pointer;
 }
 
 .headline {
@@ -97,6 +85,7 @@
   justify-content: center;
   gap: 17px;
   margin-top: 25px;
+  list-style: none;
 }
 
 .sm-icon {
