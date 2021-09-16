@@ -17,7 +17,7 @@ Additional description about the project and its features.
 
 ## Live Demo
 
-[Live Demo Link](nicolae-pop-portfolio.netlify.app)
+[Live Demo Link](portfolio-nicolae-pop.netlify.app)
 
 👤 **Nicolae Pop**
 
