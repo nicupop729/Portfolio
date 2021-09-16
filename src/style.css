@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-body {
+.first-page-section {
   background-image: url(/src/resources/Header-llustration-desktop.svg);
   background-size: 99vw;
   background-repeat: repeat-y;
@@ -19,7 +19,7 @@ body {
   align-items: center;
   width: 90vw;
   height: 72px;
-  margin: auto auto 180px auto;
+  margin: auto auto 150px auto;
 }
 
 .header-elem {
