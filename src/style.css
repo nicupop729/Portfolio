@@ -7,10 +7,17 @@
 }
 
 body {
+  width: 95vw;
+}
+
+ul {
+  list-style: none;
+}
+
+.first-page-section {
   background-image: url(/src/resources/Header-llustration-desktop.svg);
   background-size: 99vw;
   background-repeat: repeat-y;
-  width: 100vw;
 }
 
 .header {
@@ -19,7 +26,7 @@ body {
   align-items: center;
   width: 90vw;
   height: 72px;
-  margin: auto auto 180px auto;
+  margin: auto auto 150px auto;
 }
 
 .header-elem {
@@ -67,8 +74,7 @@ body {
   color: #36b37e;
 }
 
-.title,
-.parag {
+.title {
   margin: auto 260px;
   text-align: center;
 }
@@ -77,9 +83,10 @@ body {
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-  text-align: center;
   color: #172b4d;
-  margin-top: 25px;
+  margin: 25px 260px;
+  text-align: center;
+  width: 60vw;
 }
 
 .social-media {
@@ -106,4 +113,203 @@ body {
 
 .arrow-down {
   margin-top: 30px;
+}
+
+.projects-section {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.indicator-div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.projects {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  border: 0.5px solid rgba(124, 124, 124, 0.356);
+  border-radius: 8px;
+}
+
+.img {
+  height: 50vw;
+  width: 95vw;
+  max-width: 700px;
+}
+
+.project-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.project-langs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.project-lang {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #3a4a42;
+  flex: 0 1 auto;
+  order: 0;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background-color: #ebf0ee;
+}
+
+.button:link {
+  width: 122px;
+  height: 48px;
+  background: #36b37f;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  text-decoration: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:visited {
+  background-color: #008552;
+  color: #fff;
+}
+
+.button:hover {
+  background-color: #36b37f;
+  color: #fff;
+}
+
+.button:active {
+  background-color: #008552;
+  color: #fff;
+}
+
+.about-me {
+  background-image: url(/src/resources/illustration-about-me-mobile.png);
+  background-repeat: repeat-y;
+  background-size: 50vw;
+  margin-top: 30px;
+}
+
+.about-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.b7:link {
+  margin-top: 30px;
+  width: 200px;
+  height: 48px;
+  background: #36b37f;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  text-decoration: none;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.b7:visited {
+  background-color: #008552;
+  color: #fff;
+}
+
+.b7:hover {
+  background-color: #36b37f;
+  color: #fff;
+}
+
+.b7:active {
+  background-color: #008552;
+  color: #fff;
+}
+
+.experience-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.experience {
+  margin: 15px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  border: 0.5px solid rgba(124, 124, 124, 0.356);
+  border-radius: 8px;
+  width: 95vw;
+  max-width: 700px;
+  background-color: #ebf0ee;
+}
+
+.logo {
+  padding-top: -20px;
+}
+
+.logo-img {
+  padding-top: 10px;
+}
+
+.experience-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  color: #344563;
+  padding-bottom: 20px;
+}
+
+.experience-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.experience-item {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  color: #36b37e;
+  background-color: #fff;
+  padding: 10px 7px;
+  border-radius: 8px;
 }
