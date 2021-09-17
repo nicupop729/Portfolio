@@ -83,11 +83,9 @@ ul {
   font-weight: normal;
   font-size: 20px;
   line-height: 32px;
-  text-align: center;
   color: #172b4d;
-  margin-top: 25px;
-  margin: auto 260px;
-  text-align: justify;
+  margin: 25px 260px;
+  text-align: center;
   width: 60vw;
 }
 
