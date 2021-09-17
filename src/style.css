@@ -7,7 +7,7 @@
 }
 
 body {
-  width: 97vw;
+  width: 95vw;
 }
 
 ul {
@@ -74,10 +74,15 @@ ul {
   color: #36b37e;
 }
 
-.title,
-.parag {
+.title {
   margin: auto 260px;
   text-align: center;
+}
+
+.parag {
+  margin: auto 260px;
+  text-align: justify;
+  width: 60vw;
 }
 
 .parag {
@@ -255,13 +260,6 @@ ul {
 .b7:active {
   background-color: #008552;
   color: #fff;
-}
-
-.experience-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .experience-ul {
