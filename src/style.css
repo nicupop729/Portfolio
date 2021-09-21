@@ -359,7 +359,7 @@ form textarea {
   color: #091e42;
 }
 
-form button {
+form button:enabled {
   height: 40px;
   width: 120px;
   background-color: #3eb380;
@@ -370,6 +370,14 @@ form button {
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 5px;
+}
+
+form button:hover {
+  background-color: #36b37f;
+}
+
+form button:active {
+  background-color: #008552;
 }
 
 .contact-form a {
