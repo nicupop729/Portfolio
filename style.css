@@ -29,6 +29,10 @@ ul {
   margin: auto auto 150px auto;
 }
 
+.desktop-nav {
+  display: none;
+}
+
 .header-elem {
   flex: none;
   order: 0;
@@ -409,4 +413,42 @@ form input:hover {
   text-decoration-color: #18a0fa;
   border: 3px solid #18a0fa;
   text-decoration-thickness: 5px;
+}
+
+@media only screen and (min-width: 992px) {
+  body {
+    width: 98vw;
+  }
+
+  .welcome {
+    display: none;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .desktop-nav {
+    display: flex;
+    justify-content: center;
+    gap: 65px;
+  }
+
+  .desktop-nav li a:link {
+    text-decoration: none;
+    cursor: pointer;
+    color: #344563;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+  }
+
+  .desktop-nav li a:visited {
+    color: #344563;
+  }
 }
