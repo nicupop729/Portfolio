@@ -313,3 +313,100 @@ ul {
   padding: 10px 7px;
   border-radius: 8px;
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 64px auto 16px 16px;
+}
+
+.contact-form p {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 52px;
+  color: #172b4d;
+  text-align: center;
+}
+
+form {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+form input {
+  width: 100%;
+  padding: 10px 0 10px 8px;
+  background: #fff;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+}
+
+form textarea {
+  width: 100%;
+  padding: 10px 0 50px 8px;
+  vertical-align: text-top;
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  color: #091e42;
+}
+
+form button:enabled {
+  height: 40px;
+  width: 120px;
+  background-color: #3eb380;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 5px;
+}
+
+form button:visited {
+  background-color: #008552;
+}
+
+form button:hover {
+  background-color: #36b37f;
+}
+
+form button:active {
+  background-color: #008552;
+}
+
+.contact-form a {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 32px;
+  text-align: center;
+  color: #42526e;
+  margin-top: 5px;
+}
+
+.bottom-bar {
+  margin-top: 150px;
+  height: 4px;
+  width: 100px;
+  background-color: #0d151e;
+  border: #0d151e;
+  border-radius: 25px;
+}
+
+form input:hover {
+  text-decoration: underline;
+  text-decoration-color: #18a0fa;
+  border: 3px solid #18a0fa;
+  text-decoration-thickness: 5px;
+}
