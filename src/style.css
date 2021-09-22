@@ -372,6 +372,10 @@ form button:enabled {
   margin-bottom: 5px;
 }
 
+form button:visited {
+  background-color: #008552;
+}
+
 form button:hover {
   background-color: #36b37f;
 }
