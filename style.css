@@ -15,7 +15,7 @@ ul {
 }
 
 .first-page-section {
-  background-image: url(/src/resources/Header-llustration-desktop.svg);
+  background-image: url(./src/resources/Header-llustration-desktop.svg);
   background-size: 99vw;
   background-repeat: repeat-y;
 }
@@ -90,7 +90,7 @@ ul {
   color: #172b4d;
   margin: 25px 260px;
   text-align: center;
-  width: 60vw;
+  width: 80vw;
 }
 
 .social-media {
@@ -169,22 +169,24 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
+  flex-wrap: wrap;
   margin-top: 15px;
 }
 
 .project-lang {
+  flex: 0 1 auto;
   padding: 10px;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.03em;
   color: #3a4a42;
-  flex: 0 1 auto;
   order: 0;
   margin-bottom: 15px;
   border-radius: 8px;
   background-color: #ebf0ee;
+  white-space: nowrap;
 }
 
 .button:link {
@@ -304,6 +306,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
@@ -316,6 +319,7 @@ ul {
   background-color: #fff;
   padding: 10px 7px;
   border-radius: 8px;
+  white-space: nowrap;
 }
 
 .contact-form {
@@ -417,7 +421,12 @@ form input:hover {
 
 @media only screen and (min-width: 992px) {
   body {
-    width: 98vw;
+    width: 97vw;
+  }
+
+  .first-page-section {
+    background-repeat: repeat;
+    height: 1000px;
   }
 
   .welcome {
@@ -450,5 +459,52 @@ form input:hover {
 
   .desktop-nav li a:visited {
     color: #344563;
+  }
+
+  .parag {
+    width: 50vw;
+  }
+
+  .indicator-div {
+    display: none;
+  }
+
+  .projects {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 50px 20px;
+    margin-top: 50px;
+  }
+
+  .project {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px;
+    border: 0.5px solid rgba(124, 124, 124, 0.356);
+    border-radius: 8px;
+  }
+
+  .project-img {
+    width: 100%;
+  }
+
+  .img {
+    height: auto;
+    width: 100%;
+  }
+
+  .project-langs {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 auto;
+    margin-bottom: 15px;
+  }
+
+  .project-lang {
+    flex: 1 1 auto;
   }
 }
