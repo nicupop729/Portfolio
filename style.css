@@ -220,7 +220,7 @@ ul {
 }
 
 .about-me {
-  background-image: url(/src/resources/illustration-about-me-mobile.png);
+  background-image: url(./src/resources/illustration-about-me-mobile.png);
   background-repeat: repeat-y;
   margin-top: 30px;
   display: flex;
@@ -330,11 +330,10 @@ ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 64px auto 16px 16px;
+  margin: 64px 16px 16px 16px;
 }
 
 .contact-form p {
-  font-style: normal;
   font-weight: bold;
   font-size: 40px;
   line-height: 52px;
@@ -369,6 +368,7 @@ form textarea {
   font-size: 15px;
   line-height: 24px;
   color: #091e42;
+  border-color: #36b37f;
 }
 
 form button:enabled {
@@ -414,6 +414,10 @@ form button:active {
   background-color: #0d151e;
   border: #0d151e;
   border-radius: 25px;
+}
+
+footer .social-media {
+  display: none;
 }
 
 @media only screen and (min-width: 992px) {
@@ -507,6 +511,10 @@ form button:active {
     flex: 0 1 auto;
   }
 
+  .about-me {
+    margin-top: 170px;
+  }
+
   .experience-ul {
     display: grid;
     justify-content: space-evenly;
@@ -548,5 +556,45 @@ form button:active {
   .experience-list::after {
     content: "";
     height: 55px;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 64px auto;
+  }
+
+  .contact-form p {
+    width: 66%;
+    font-size: 30px;
+    padding-right: 5px;
+    padding-left: 12%;
+  }
+
+  .contact-form form {
+    background-image: url(./src/resources/contact-form-illustratoin-3-desktop.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    display: flex;
+    align-items: flex-start;
+    padding-right: 12%;
+    padding-left: 5px;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .contact-form .social-media,
+  .contact-form a {
+    display: none;
+  }
+
+  footer .social-media {
+    margin-top: 200px;
+    display: flex;
+    border-top: 1px solid #dfe1e6;
   }
 }
