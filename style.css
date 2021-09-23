@@ -79,6 +79,11 @@ ul {
   color: #36b37e;
 }
 
+.animation {
+  animation-duration: 3s;
+  animation-name: title_right_animation;
+}
+
 .title {
   margin: auto 260px;
   text-align: center;
@@ -202,6 +207,7 @@ ul {
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .button:visited {
@@ -424,6 +430,17 @@ footer .social-media {
   body {
     width: 97vw;
     overflow-x: hidden;
+  }
+
+  @keyframes title_right_animation {
+    from {
+      width: 300%;
+    }
+
+    to {
+      margin-left: auto;
+      width: 100%;
+    }
   }
 
   .first-page-section {
