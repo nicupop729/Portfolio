@@ -71,18 +71,16 @@ ul {
   letter-spacing: 0.37px;
 }
 
-
-
 .row1 {
   color: #172b4d;
   animation-duration: 3s;
-  animation-name: title_grow_animation
+  animation-name: title_grow_animation;
 }
 
 .row2 {
   color: #36b37e;
   animation-duration: 3s;
-  animation-name: title_grow_animation
+  animation-name: title_grow_animation;
   animation-delay: 3s;
 }
 
@@ -435,15 +433,15 @@ footer .social-media {
   }
 
   @keyframes title_grow_animation {
-  from {
-    width: 300%;
-  }
+    from {
+      width: 300%;
+    }
 
-  to {
-    margin-left: auto;
-    width: 100%;
+    to {
+      margin-left: auto;
+      width: 100%;
+    }
   }
-}
 
   .first-page-section {
     background-repeat: repeat;
