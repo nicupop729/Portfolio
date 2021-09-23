@@ -202,6 +202,7 @@ ul {
   display: grid;
   justify-content: center;
   align-items: center;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .button:visited {
