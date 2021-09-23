@@ -73,15 +73,15 @@ ul {
 
 .row1 {
   color: #172b4d;
-  animation-duration: 3s;
-  animation-name: title_grow_animation;
 }
 
 .row2 {
   color: #36b37e;
+}
+
+.animation {
   animation-duration: 3s;
-  animation-name: title_grow_animation;
-  animation-delay: 3s;
+  animation-name: title_right_animation;
 }
 
 .title {
@@ -432,7 +432,7 @@ footer .social-media {
     overflow-x: hidden;
   }
 
-  @keyframes title_grow_animation {
+  @keyframes title_right_animation {
     from {
       width: 300%;
     }
