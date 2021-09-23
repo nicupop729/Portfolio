@@ -222,7 +222,6 @@ ul {
 .about-me {
   background-image: url(/src/resources/illustration-about-me-mobile.png);
   background-repeat: repeat-y;
-  /* background-size: 50vw; */
   margin-top: 30px;
   display: flex;
   flex-direction: column;
@@ -517,6 +516,16 @@ form button:active {
     max-width: 1095.91px;
   }
 
+  .experience {
+    width: fit-content;
+    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+
   .experience:first-child {
     margin-right: 0;
     display: flex;
@@ -526,16 +535,6 @@ form button:active {
   .experience:first-child .logo {
     padding-top: 0;
     height: 153px;
-  }
-
-  .experience {
-    width: fit-content;
-    grid-gap: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
   }
 
   .experience-list {
