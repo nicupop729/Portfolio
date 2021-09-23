@@ -444,6 +444,17 @@ footer .social-media {
     justify-content: center;
   }
 
+  footer .social-media {
+    margin-top: 200px;
+    display: flex;
+    border-top: 1px solid #dfe1e6;
+  }
+
+  .contact-form .social-media,
+  .contact-form a {
+    display: none;
+  }
+
   .desktop-nav {
     display: flex;
     justify-content: center;
@@ -585,16 +596,5 @@ footer .social-media {
 
   hr {
     display: none;
-  }
-
-  .contact-form .social-media,
-  .contact-form a {
-    display: none;
-  }
-
-  footer .social-media {
-    margin-top: 200px;
-    display: flex;
-    border-top: 1px solid #dfe1e6;
   }
 }
