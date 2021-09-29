@@ -2,11 +2,10 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: Inter, sans-serif;
-  font-style: normal;
 }
 
 body {
+  font-family: Inter, sans-serif;
   width: 100vw;
   overflow-x: hidden;
 }
@@ -368,9 +367,6 @@ form textarea {
   width: 100%;
   padding: 10px 0 50px 8px;
   vertical-align: text-top;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: normal;
   font-size: 15px;
   line-height: 24px;
   color: #091e42;
