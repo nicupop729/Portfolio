@@ -33,6 +33,39 @@ ul {
   display: none;
 }
 
+.toggle-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 65.25%;
+  height: 100%;
+  z-index: 1;
+  padding-top: 50px;
+  color: #3a4a42;
+  overflow-x: hidden;
+}
+
+.toggle-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15%;
+  padding-left: 5%;
+  margin-top: 15%;
+}
+
+.toggle-nav ul li {
+  height: 24px;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+#closeIcon-id {
+  float: right;
+  padding-right: 5%;
+  border: 2px solid #fff;
+}
+
 .header-elem {
   flex: none;
   order: 0;
