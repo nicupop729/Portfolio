@@ -18,7 +18,7 @@ menuContact.textContent = 'Contact';
 const closeIcon = createMyElement('span');
 closeIcon.textContent = 'X';
 closeIcon.id = 'closeIcon-id';
-let projectUl = getMyElement('projects');
+// let projectUl = getMyElement('projects');
 let projectImg = createMyElement('img');
 
 menuUl.appendChild(menuPortfolio);
@@ -104,31 +104,104 @@ const projects = [
     liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
+
+  {
+    name: 'Keeping track of hundreds of components',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
+  {
+    name: 'Multi-Post Stories',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
+  {
+    name: 'Gain+Glory',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
 ];
+
+
 
 function loadProject() {
   projects.forEach((project) => {
-    let li = createMyElement('li');
-    li.className = 'project';
+
+    preventDefault = true;
+    let projectLi = createMyElement('li');
+    projectLi.className = 'project';
     let imageDiv = createMyElement('div');
-    imageDiv.className = 'project-img';
+    imageDiv.classList.add('project-img');
+
+    projectLi.appendChild(imageDiv);
+    console.log(projectLi)
     let projectImage = createMyElement('img');
     projectImage.className = 'img';
     projectImage.src = project.projectImg;
     imageDiv.appendChild(projectImage);
-    let h3 = createMyElement('h3');
-    h3.className = 'project-title';
+    let projectH3 = createMyElement('h3');
+    projectH3.textContent = project.name;
+    projectH3.className = 'project-title';
     let innerUl = createMyElement('ul');
     innerUl.className = 'project-langs';
-    let innerLi = createMyElement('li');
-    innerLi.className = 'project-lang';
-    let button = createMyElement('a');
-    button.className = 'button b1';
-    button.href = '#';
+    
+    let projectBtn = createMyElement('a');
+    projectBtn.className = 'button b1';
+    projectBtn.href = '#';
+    projectBtn.textContent = "See Project"
 
-    li.appendChild(imageDiv);
-    console.log(li);
+
+    for(let i = 0; i < project.techologies.length - 2; i++){
+      var innerLi = createMyElement('li');
+      innerLi.className = 'project-lang';
+      innerLi.textContent = project.techologies[i]
+      innerUl.appendChild(innerLi);
+    }
+    projectLi.appendChild(imageDiv);
+    projectLi.appendChild(projectH3);
+    projectLi.appendChild(innerUl);
+    projectLi.appendChild(projectBtn);
+
+    
+    let projectUl = getMyElement('.projects');
+    projectUl.prepend(projectLi);
   });
+  
 }
+
+
 
 loadProject();
