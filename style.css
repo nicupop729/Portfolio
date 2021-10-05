@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Inter, sans-serif;
   width: 100vw;
@@ -37,10 +41,10 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  width: 65.25%;
+  width: 100vw;
   height: 100%;
   z-index: 1;
-  padding-top: 50px;
+  padding-top: 40px;
   color: #3a4a42;
   overflow-x: hidden;
 }
@@ -49,21 +53,23 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 15%;
+  height: 20%;
   padding-left: 5%;
-  margin-top: 15%;
+  margin-top: 10%;
 }
 
 .toggle-nav ul li {
   height: 24px;
   font-size: 32px;
   line-height: 44px;
+  cursor: pointer;
 }
 
 #closeIcon-id {
   float: right;
   padding-right: 5%;
   border: 2px solid #fff;
+  cursor: pointer;
 }
 
 .header-elem {
@@ -612,7 +618,7 @@ footer .social-media {
   }
 
   .experience-list::after {
-    content: "";
+    content: '';
     height: 55px;
   }
 
