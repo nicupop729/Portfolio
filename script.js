@@ -1,3 +1,7 @@
+// const { url } = require('inspector');
+
+// const { create } = require('domain');
+
 const getMyElement = (param) => document.querySelector(param);
 
 const createMyElement = (param) => document.createElement(param);
@@ -14,6 +18,8 @@ menuContact.textContent = 'Contact';
 const closeIcon = createMyElement('span');
 closeIcon.textContent = 'X';
 closeIcon.id = 'closeIcon-id';
+let projectUl = getMyElement('projects');
+let projectImg = createMyElement('img');
 
 menuUl.appendChild(menuPortfolio);
 menuUl.appendChild(menuAbout);
@@ -48,3 +54,81 @@ humbergerButton.addEventListener('click', () => {
   menuDiv.style.backgroundColor = '#fff';
   menuDiv.style.display = 'block';
 });
+
+const projects = [
+  {
+    name: 'Keeping track of hundreds of components',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
+  {
+    name: 'Multi-Post Stories',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
+  {
+    name: 'Gain+Glory',
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
+    projectImg: './src/resources/Snapshoot-Portfolio.png',
+    techologies: [
+      'Codekit',
+      'GitHub',
+      'JavaScript',
+      'Bootstrap',
+      'Terminal',
+      'Codepen',
+    ],
+    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
+    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+  },
+];
+
+function loadProject() {
+  projects.forEach((project) => {
+    let li = createMyElement('li');
+    li.className = 'project';
+    let imageDiv = createMyElement('div');
+    imageDiv.className = 'project-img';
+    let projectImage = createMyElement('img');
+    projectImage.className = 'img';
+    projectImage.src = project.projectImg;
+    imageDiv.appendChild(projectImage);
+    let h3 = createMyElement('h3');
+    h3.className = 'project-title';
+    let innerUl = createMyElement('ul');
+    innerUl.className = 'project-langs';
+    let innerLi = createMyElement('li');
+    innerLi.className = 'project-lang';
+    let button = createMyElement('a');
+    button.className = 'button b1';
+    button.href = '#';
+
+    li.appendChild(imageDiv);
+    console.log(li);
+  });
+}
+
+loadProject();
