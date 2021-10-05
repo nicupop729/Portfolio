@@ -157,6 +157,7 @@ const projects = [
 
 
 
+
 function loadProject() {
   projects.forEach((project) => {
 
@@ -167,7 +168,6 @@ function loadProject() {
     imageDiv.classList.add('project-img');
 
     projectLi.appendChild(imageDiv);
-    console.log(projectLi)
     let projectImage = createMyElement('img');
     projectImage.className = 'img';
     projectImage.src = project.projectImg;
@@ -178,11 +178,10 @@ function loadProject() {
     let innerUl = createMyElement('ul');
     innerUl.className = 'project-langs';
     
-    let projectBtn = createMyElement('a');
-    projectBtn.className = 'button b1';
+    var projectBtn = createMyElement('a');
+    projectBtn.className = 'button proBtn';
     projectBtn.href = '#';
     projectBtn.textContent = "See Project"
-
 
     for(let i = 0; i < project.techologies.length - 2; i++){
       var innerLi = createMyElement('li');
@@ -199,9 +198,17 @@ function loadProject() {
     let projectUl = getMyElement('.projects');
     projectUl.prepend(projectLi);
   });
-  
 }
 
 
 
+
+
+
+
+
+
+
+
 loadProject();
+
