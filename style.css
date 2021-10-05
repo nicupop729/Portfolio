@@ -176,6 +176,65 @@ ul {
   margin-top: 20px;
 }
 
+.pop-up-div {
+  padding-top: 30px;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+}
+
+.inner-pop-up-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 65vw;
+  margin-left: 20%;
+}
+
+/* .popUpImgDiv {
+  display: flex;
+  justify-content: center;
+} */
+
+.pop-up-img {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 75%;
+}
+
+.cont-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: green;
+}
+
+.tech-list-div {
+  background-color: red;
+  /* align-self: flex-end; */
+  /* width: 100%; */
+}
+
+.pop-up-tech-langs {
+  width: 10%;
+  font-size: 5px;
+}
+
+.pop-up-desc {
+  width: 60vw;
+}
+
+.btn-div {
+  background-color: blue;
+}
+
 .projects {
   margin-top: 50px;
   display: flex;

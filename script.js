@@ -1,6 +1,4 @@
-// const { url } = require('inspector');
-
-// const { create } = require('domain');
+'use strict';
 
 const getMyElement = (param) => document.querySelector(param);
 
@@ -57,6 +55,7 @@ humbergerButton.addEventListener('click', () => {
 
 const projects = [
   {
+    id: 1,
     name: 'Keeping track of hundreds of components',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -73,6 +72,7 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
+    id: 2,
     name: 'Multi-Post Stories',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -89,6 +89,7 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
+    id: 3,
     name: 'Gain+Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -104,9 +105,9 @@ const projects = [
     liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
-
   {
-    name: 'Keeping track of hundreds of components',
+    id: 4,
+    name: 'Hundreds of components',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     projectImg: './src/resources/Snapshoot-Portfolio.png',
@@ -122,7 +123,8 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    name: 'Multi-Post Stories',
+    id: 5,
+    name: 'Multi-Post',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     projectImg: './src/resources/Snapshoot-Portfolio.png',
@@ -138,7 +140,8 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    name: 'Gain+Glory',
+    id: 6,
+    name: 'Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
     projectImg: './src/resources/Snapshoot-Portfolio.png',
@@ -155,13 +158,9 @@ const projects = [
   },
 ];
 
-
-
-
 function loadProject() {
   projects.forEach((project) => {
-
-    preventDefault = true;
+    // preventDefault = true;
     let projectLi = createMyElement('li');
     projectLi.className = 'project';
     let imageDiv = createMyElement('div');
@@ -177,16 +176,16 @@ function loadProject() {
     projectH3.className = 'project-title';
     let innerUl = createMyElement('ul');
     innerUl.className = 'project-langs';
-    
+
     var projectBtn = createMyElement('a');
     projectBtn.className = 'button proBtn';
     projectBtn.href = '#';
-    projectBtn.textContent = "See Project"
+    projectBtn.textContent = 'See Project';
 
-    for(let i = 0; i < project.techologies.length - 2; i++){
+    for (let i = 0; i < project.techologies.length - 2; i++) {
       var innerLi = createMyElement('li');
       innerLi.className = 'project-lang';
-      innerLi.textContent = project.techologies[i]
+      innerLi.textContent = project.techologies[i];
       innerUl.appendChild(innerLi);
     }
     projectLi.appendChild(imageDiv);
@@ -194,21 +193,71 @@ function loadProject() {
     projectLi.appendChild(innerUl);
     projectLi.appendChild(projectBtn);
 
-    
+    projectBtn.addEventListener('click', () => {
+      const popUpDiv = createMyElement('div');
+      popUpDiv.className = 'pop-up-div';
+      const innerPopUpDiv = createMyElement('div');
+      innerPopUpDiv.className = 'inner-pop-up-div';
+      const popUpImgDiv = createMyElement('div');
+
+      const popUpImg = createMyElement('img');
+      popUpImg.className = 'pop-up-img';
+      popUpImg.src = project.projectImg;
+      const popUpContDiv = createMyElement('div');
+      popUpContDiv.className = 'cont-div';
+      const contTitle = createMyElement('h3');
+      contTitle.className = 'cont-title';
+      contTitle.textContent = project.name;
+      const techListDiv = createMyElement('div');
+      techListDiv.className = 'tech-list-div';
+      const techUl = createMyElement('ul');
+      techUl.className = 'project-langs';
+      const btnDiv = createMyElement('div');
+      btnDiv.className = 'btn-div';
+      const popUpBtn = createMyElement('a');
+      popUpBtn.className = 'button';
+      popUpBtn.textContent = 'See live';
+      popUpBtn.href = project.liveVersion;
+
+      const popUpRepoBtn = createMyElement('a');
+      popUpRepoBtn.className = 'button';
+      popUpRepoBtn.textContent = 'See source';
+      popUpRepoBtn.href = project.gitHubRepo;
+
+      const popUpDesc = createMyElement('p');
+      popUpDesc.className = 'pop-up-desc';
+      popUpDesc.textContent = project.description;
+      const closePopUp = createMyElement('span');
+      closePopUp.className = 'close-pop-up';
+      closePopUp.textContent = 'X';
+      popUpDiv.style.display = 'block';
+
+      for (let i = 0; i < project.techologies.length; i++) {
+        var innerLi = createMyElement('li');
+        innerLi.className = 'project-lang pop-up-tech-langs';
+        innerLi.textContent = project.techologies[i];
+        techUl.appendChild(innerLi);
+      }
+
+      // btnDiv.appendChild(popUpRepoBtn);
+      // btnDiv.appendChild(popUpBtn);
+      techListDiv.appendChild(techUl);
+      popUpImgDiv.appendChild(popUpImg);
+      innerPopUpDiv.appendChild(popUpImgDiv);
+      popUpContDiv.appendChild(contTitle);
+      popUpContDiv.appendChild(techListDiv);
+      popUpContDiv.appendChild(btnDiv);
+      innerPopUpDiv.appendChild(popUpContDiv);
+      innerPopUpDiv.appendChild(popUpDesc);
+      innerPopUpDiv.appendChild(closePopUp);
+      popUpDiv.appendChild(innerPopUpDiv);
+      document.body.appendChild(popUpDiv);
+      console.log(popUpDesc);
+    });
+
     let projectUl = getMyElement('.projects');
-    projectUl.prepend(projectLi);
+    projectUl.appendChild(projectLi);
   });
 }
 
-
-
-
-
-
-
-
-
-
-
 loadProject();
-
