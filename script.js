@@ -16,7 +16,6 @@ menuContact.textContent = 'Contact';
 const closeIcon = createMyElement('span');
 closeIcon.textContent = 'X';
 closeIcon.id = 'closeIcon-id';
-// let projectUl = getMyElement('projects');
 let projectImg = createMyElement('img');
 
 menuUl.appendChild(menuPortfolio);
@@ -55,7 +54,6 @@ humbergerButton.addEventListener('click', () => {
 
 const projects = [
   {
-    id: 1,
     name: 'Keeping track of hundreds of components',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -72,7 +70,6 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    id: 2,
     name: 'Multi-Post Stories',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -89,7 +86,6 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    id: 3,
     name: 'Gain+Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -106,7 +102,6 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    id: 4,
     name: 'Hundreds of components',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -123,7 +118,6 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    id: 5,
     name: 'Multi-Post',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -140,7 +134,6 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
   },
   {
-    id: 6,
     name: 'Glory',
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
@@ -160,7 +153,6 @@ const projects = [
 
 function loadProject() {
   projects.forEach((project) => {
-    // preventDefault = true;
     let projectLi = createMyElement('li');
     projectLi.className = 'project';
     let imageDiv = createMyElement('div');
@@ -178,7 +170,7 @@ function loadProject() {
     innerUl.className = 'project-langs';
 
     var projectBtn = createMyElement('a');
-    projectBtn.className = 'button proBtn';
+    projectBtn.className = 'button';
     projectBtn.href = '#';
     projectBtn.textContent = 'See Project';
 
@@ -199,7 +191,7 @@ function loadProject() {
       const innerPopUpDiv = createMyElement('div');
       innerPopUpDiv.className = 'inner-pop-up-div';
       const popUpImgDiv = createMyElement('div');
-
+      popUpImgDiv.className = 'pop-up-img-div';
       const popUpImg = createMyElement('img');
       popUpImg.className = 'pop-up-img';
       popUpImg.src = project.projectImg;
@@ -215,12 +207,12 @@ function loadProject() {
       const btnDiv = createMyElement('div');
       btnDiv.className = 'btn-div';
       const popUpBtn = createMyElement('a');
-      popUpBtn.className = 'button';
+      popUpBtn.className = 'button popUpBtn';
       popUpBtn.textContent = 'See live';
       popUpBtn.href = project.liveVersion;
 
       const popUpRepoBtn = createMyElement('a');
-      popUpRepoBtn.className = 'button';
+      popUpRepoBtn.className = 'button popUpBtn';
       popUpRepoBtn.textContent = 'See source';
       popUpRepoBtn.href = project.gitHubRepo;
 
@@ -229,7 +221,7 @@ function loadProject() {
       popUpDesc.textContent = project.description;
       const closePopUp = createMyElement('span');
       closePopUp.className = 'close-pop-up';
-      closePopUp.textContent = 'X';
+      closePopUp.textContent = 'x';
       popUpDiv.style.display = 'block';
 
       for (let i = 0; i < project.techologies.length; i++) {
@@ -239,8 +231,8 @@ function loadProject() {
         techUl.appendChild(innerLi);
       }
 
-      // btnDiv.appendChild(popUpRepoBtn);
-      // btnDiv.appendChild(popUpBtn);
+      btnDiv.appendChild(popUpRepoBtn);
+      btnDiv.appendChild(popUpBtn);
       techListDiv.appendChild(techUl);
       popUpImgDiv.appendChild(popUpImg);
       innerPopUpDiv.appendChild(popUpImgDiv);
@@ -252,7 +244,10 @@ function loadProject() {
       innerPopUpDiv.appendChild(closePopUp);
       popUpDiv.appendChild(innerPopUpDiv);
       document.body.appendChild(popUpDiv);
-      console.log(popUpDesc);
+
+      closePopUp.addEventListener('click', () => {
+        popUpDiv.style.display = 'none';
+      });
     });
 
     let projectUl = getMyElement('.projects');

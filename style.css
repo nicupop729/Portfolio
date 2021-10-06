@@ -176,65 +176,6 @@ ul {
   margin-top: 20px;
 }
 
-.pop-up-div {
-  padding-top: 30px;
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
-  top: 0;
-  left: 0;
-}
-
-.inner-pop-up-div {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: white;
-  width: 65vw;
-  margin-left: 20%;
-}
-
-/* .popUpImgDiv {
-  display: flex;
-  justify-content: center;
-} */
-
-.pop-up-img {
-  display: block;
-  margin: 0 auto;
-  height: auto;
-  width: 75%;
-}
-
-.cont-div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: green;
-}
-
-.tech-list-div {
-  background-color: red;
-  /* align-self: flex-end; */
-  /* width: 100%; */
-}
-
-.pop-up-tech-langs {
-  width: 10%;
-  font-size: 5px;
-}
-
-.pop-up-desc {
-  width: 60vw;
-}
-
-.btn-div {
-  background-color: blue;
-}
-
 .projects {
   margin-top: 50px;
   display: flex;
@@ -520,7 +461,7 @@ footer .social-media {
   display: none;
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1092px) {
   body {
     width: 97vw;
     overflow-x: hidden;
@@ -708,5 +649,97 @@ footer .social-media {
 
   hr {
     display: none;
+  }
+
+  .pop-up-div {
+    padding-top: 30px;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    overflow-y: scroll !important;
+  }
+
+  .inner-pop-up-div {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 920px;
+    height: 1083px;
+    margin: 0 auto auto auto;
+  }
+
+  .pop-up-img-div {
+    margin: 0 24px 10px 24px;
+  }
+
+  .pop-up-img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    width: 95%;
+  }
+
+  .cont-div {
+    width: 90%;
+    margin-bottom: 30px;
+  }
+
+  .cont-title {
+    font-size: 32px;
+    line-height: 44px;
+    color: #172b4d;
+    width: 65%;
+  }
+
+  .tech-list-div {
+    float: left;
+  }
+
+  .pop-up-desc {
+    color: #344563;
+    width: 90%;
+    font-size: 16px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .btn-div {
+    float: right;
+    margin-top: 0;
+    display: flex;
+    gap: 10px;
+  }
+
+  .popUpBtn {
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 20px;
+    width: 115px;
+    height: 48px;
+  }
+
+  .close-pop-up {
+    display: inline-block;
+    position: absolute;
+    top: 35px;
+    right: 50px;
+    font-size: 20px;
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+    padding: 5px;
+    color: #67798e;
+    background-color: #ddd;
+    border: 2px solid #ddd;
+    border-radius: 5px;
   }
 }
