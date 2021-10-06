@@ -171,7 +171,7 @@ function loadProject() {
     projectBtn.href = '#';
     projectBtn.textContent = 'See Project';
 
-    for (let i = 0; i < project.techologies.length - 2; i++) {
+    for (let i = 0; i < project.techologies.length - 2; i += 1) {
       const innerLi = createMyElement('li');
       innerLi.className = 'project-lang';
       innerLi.textContent = project.techologies[i];
@@ -221,7 +221,7 @@ function loadProject() {
       closePopUp.textContent = 'x';
       popUpDiv.style.display = 'block';
 
-      for (let i = 0; i < project.techologies.length; i++) {
+      for (let i = 0; i < project.techologies.length; i += 1) {
         const innerLi = createMyElement('li');
         innerLi.className = 'project-lang pop-up-tech-langs';
         innerLi.textContent = project.techologies[i];
