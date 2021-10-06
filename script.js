@@ -200,7 +200,7 @@ function loadProject() {
       const techListDiv = createMyElement('div');
       techListDiv.className = 'tech-list-div';
       const techUl = createMyElement('ul');
-      techUl.className = 'project-langs';
+      techUl.className = 'project-langs pop-up-mobile-langs';
       const btnDiv = createMyElement('div');
       btnDiv.className = 'btn-div';
       const popUpBtn = createMyElement('a');
