@@ -785,7 +785,7 @@ footer .social-media {
     background-color: white;
     width: 920px;
     height: 1083px;
-    margin: 0 auto auto auto;
+    margin: 0 auto 10px auto;
   }
 
   .pop-up-img-div {
@@ -802,6 +802,7 @@ footer .social-media {
   .cont-div {
     width: 90%;
     margin-bottom: 30px;
+    position: relative;
   }
 
   .cont-title {
@@ -809,10 +810,23 @@ footer .social-media {
     line-height: 44px;
     color: #172b4d;
     width: 65%;
+    margin: 15px auto 20px 0;
   }
 
   .tech-list-div {
     float: left;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .pop-up-mobile-langs {
+    margin: 0;
+    padding-left: 0;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .pop-up-desc {
@@ -824,9 +838,15 @@ footer .social-media {
 
   .btn-div {
     float: right;
-    margin-top: 0;
     display: flex;
     gap: 10px;
+    position: absolute;
+    margin-top: 0;
+    margin-left: auto;
+    margin-bottom: auto;
+    width: 30%;
+    top: 10px;
+    right: 0;
   }
 
   .popUpBtn {
@@ -840,7 +860,7 @@ footer .social-media {
   .close-pop-up {
     display: inline-block;
     position: absolute;
-    top: 35px;
+    top: 27px;
     right: 50px;
     font-size: 20px;
     height: 35px;
