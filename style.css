@@ -508,7 +508,6 @@ form button:active {
 .tech-list-div {
   display: flex;
   justify-content: space-between;
-  align-items: space-between;
   width: 95%;
   margin-left: auto;
   padding: 0;
@@ -525,6 +524,7 @@ form button:active {
   margin-left: 0;
   align-self: flex-start;
 }
+
 .pop-up-desc {
   color: #344563;
   width: 90%;
