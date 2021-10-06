@@ -1,5 +1,3 @@
-'use strict';
-
 const getMyElement = (param) => document.querySelector(param);
 
 const createMyElement = (param) => document.createElement(param);
@@ -16,7 +14,6 @@ menuContact.textContent = 'Contact';
 const closeIcon = createMyElement('span');
 closeIcon.textContent = 'X';
 closeIcon.id = 'closeIcon-id';
-let projectImg = createMyElement('img');
 
 menuUl.appendChild(menuPortfolio);
 menuUl.appendChild(menuAbout);
@@ -153,29 +150,29 @@ const projects = [
 
 function loadProject() {
   projects.forEach((project) => {
-    let projectLi = createMyElement('li');
+    const projectLi = createMyElement('li');
     projectLi.className = 'project';
-    let imageDiv = createMyElement('div');
+    const imageDiv = createMyElement('div');
     imageDiv.classList.add('project-img');
 
     projectLi.appendChild(imageDiv);
-    let projectImage = createMyElement('img');
+    const projectImage = createMyElement('img');
     projectImage.className = 'img';
     projectImage.src = project.projectImg;
     imageDiv.appendChild(projectImage);
-    let projectH3 = createMyElement('h3');
+    const projectH3 = createMyElement('h3');
     projectH3.textContent = project.name;
     projectH3.className = 'project-title';
-    let innerUl = createMyElement('ul');
+    const innerUl = createMyElement('ul');
     innerUl.className = 'project-langs';
 
-    var projectBtn = createMyElement('a');
+    const projectBtn = createMyElement('a');
     projectBtn.className = 'button';
     projectBtn.href = '#';
     projectBtn.textContent = 'See Project';
 
     for (let i = 0; i < project.techologies.length - 2; i++) {
-      var innerLi = createMyElement('li');
+      const innerLi = createMyElement('li');
       innerLi.className = 'project-lang';
       innerLi.textContent = project.techologies[i];
       innerUl.appendChild(innerLi);
@@ -225,7 +222,7 @@ function loadProject() {
       popUpDiv.style.display = 'block';
 
       for (let i = 0; i < project.techologies.length; i++) {
-        var innerLi = createMyElement('li');
+        const innerLi = createMyElement('li');
         innerLi.className = 'project-lang pop-up-tech-langs';
         innerLi.textContent = project.techologies[i];
         techUl.appendChild(innerLi);
@@ -250,7 +247,7 @@ function loadProject() {
       });
     });
 
-    let projectUl = getMyElement('.projects');
+    const projectUl = getMyElement('.projects');
     projectUl.appendChild(projectLi);
   });
 }
