@@ -163,13 +163,25 @@ function saveDataToLs() {
   localStorage.setItem('userData', JSON.stringify(userData));
 }
 
-form.addEventListener('submit', getDataFromForm);
 
 function getDataFromForm() {
   const newUser = new User(nameInput.value, emailInput.value);
   userData.push(newUser);
   saveDataToLs();
 }
+
+function getDataFromLocalSt() {
+    const dataFromLocal = JSON.parse(localStorage.getItem('userData'));
+    if(dataFromLocal){
+      dataFromLocal.forEach(data =>{
+        nameInput.value = data.name;
+        emailInput.value = data.email;
+      });
+    }
+}
+
+form.addEventListener('submit', getDataFromForm);
+
 
 function loadProject() {
   projects.forEach((project) => {
@@ -273,6 +285,7 @@ function loadProject() {
     const projectUl = getMyElement('.projects');
     projectUl.appendChild(projectLi);
   });
+  getDataFromLocalSt();
 }
 
 form.addEventListener('submit', (e) => {
