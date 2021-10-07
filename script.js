@@ -163,7 +163,6 @@ function saveDataToLs() {
   localStorage.setItem('userData', JSON.stringify(userData));
 }
 
-
 function getDataFromForm() {
   const newUser = new User(nameInput.value, emailInput.value);
   userData.push(newUser);
@@ -171,17 +170,16 @@ function getDataFromForm() {
 }
 
 function getDataFromLocalSt() {
-    const dataFromLocal = JSON.parse(localStorage.getItem('userData'));
-    if(dataFromLocal){
-      dataFromLocal.forEach(data =>{
-        nameInput.value = data.name;
-        emailInput.value = data.email;
-      });
-    }
+  const dataFromLocal = JSON.parse(localStorage.getItem('userData'));
+  if (dataFromLocal) {
+    dataFromLocal.forEach((data) => {
+      nameInput.value = data.name;
+      emailInput.value = data.email;
+    });
+  }
 }
 
 form.addEventListener('submit', getDataFromForm);
-
 
 function loadProject() {
   projects.forEach((project) => {
