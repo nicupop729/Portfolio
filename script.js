@@ -253,3 +253,33 @@ function loadProject() {
 }
 
 loadProject();
+
+const form = getMyElement('form');
+const input = getMyElement('#email-input');
+const invalidH3 = getMyElement('.invalid-email');
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const capitalLetters = [];
+
+  const emailCheck = input.value.split('');
+  for (let i = 0; i < emailCheck.length; i += 1) {
+    if (!/[a-z]/.test(emailCheck[i]) && /[A-Z]/.test(emailCheck[i])) {
+      capitalLetters.push(emailCheck[i]);
+    }
+  }
+
+  function errorMessage() {
+    invalidH3.textContent = 'Please enter your email in lower case';
+    invalidH3.style.color = 'red';
+  }
+
+  function corectEmail() {
+    invalidH3.textContent = '';
+    form.submit();
+  }
+
+  if (capitalLetters.length > 0) errorMessage();
+  else corectEmail();
+});
