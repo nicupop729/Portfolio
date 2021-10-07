@@ -10,9 +10,9 @@
       function gtag() {
         window.dataLayer.push(arguments);
       }
-      gtag("js", new Date());
+      gtag('js', new Date());
 
-      gtag("config", "G-YN85NQDT71");
+      gtag('config', 'G-YN85NQDT71');
     </script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -307,7 +307,13 @@
           placeholder="Full name"
           required
         />
-        <input type="email" name="email" placeholder="Email address" required />
+        <input
+          type="email"
+          name="email"
+          id="email-input"
+          placeholder="Email address"
+          required
+        />
         <textarea
           maxlength="500"
           name="message"

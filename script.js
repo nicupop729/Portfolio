@@ -253,3 +253,38 @@ function loadProject() {
 }
 
 loadProject();
+
+const form = getMyElement('form');
+const input = getMyElement('#email-input');
+const formContainer = getMyElement('.contact-form');
+const error = createMyElement('span');
+error.className = 'errorSpan';
+formContainer.appendChild(error);
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const capitalLetters = [];
+
+  const emailCheck = input.value.split('');
+  for (let i = 0; i < emailCheck.length; i += 1) {
+    if (!/[a-z]/.test(emailCheck[i]) && /[A-Z]/.test(emailCheck[i])) {
+      capitalLetters.push(emailCheck[i]);
+    }
+  }
+
+  function errorMessage() {
+    error.textContent = 'Please enter your email in lowercase';
+    error.style.color = 'red';
+  }
+
+  function corectEmail() {
+    error.textContent = '';
+    form.submit();
+  }
+
+  if (capitalLetters.length > 0) errorMessage();
+  else corectEmail();
+});
+
+displayProjects();
