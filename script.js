@@ -256,6 +256,7 @@ loadProject();
 
 const form = getMyElement('form');
 const input = getMyElement('#email-input');
+const invalidH3 = getMyElement('.invalid-email');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -270,7 +271,6 @@ form.addEventListener('submit', (e) => {
   }
 
   function errorMessage() {
-    const invalidH3 = getMyElement('.invalid-email');
     invalidH3.textContent = 'Please enter your email in lower case';
     invalidH3.style.color = 'red';
   }
