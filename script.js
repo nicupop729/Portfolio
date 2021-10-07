@@ -270,18 +270,16 @@ form.addEventListener('submit', (e) => {
   }
 
   function errorMessage() {
-    const invalidH3 = getMyElement('.invalid-email')
-    invalidH3.textContent = 'Please enter your email in lowercase';
+    const invalidH3 = getMyElement('.invalid-email');
+    invalidH3.textContent = 'Please enter your email in lower case';
     invalidH3.style.color = 'red';
   }
 
   function corectEmail() {
-    error.textContent = '';
+    invalidH3.textContent = '';
     form.submit();
   }
 
   if (capitalLetters.length > 0) errorMessage();
   else corectEmail();
 });
-
-displayProjects();
