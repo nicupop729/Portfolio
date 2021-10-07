@@ -2,6 +2,10 @@ const getMyElement = (param) => document.querySelector(param);
 
 const createMyElement = (param) => document.createElement(param);
 
+const form = getMyElement('form');
+const emailInput = getMyElement('#email-input');
+const nameInput = getMyElement('#name-input');
+const invalidH3 = getMyElement('.invalid-email');
 const menuDiv = createMyElement('div');
 menuDiv.className = 'toggle-nav';
 const menuUl = createMyElement('ul');
@@ -148,6 +152,35 @@ const projects = [
   },
 ];
 
+const userData = [];
+
+function User(name, email) {
+  this.name = name;
+  this.email = email;
+}
+
+function saveDataToLs() {
+  localStorage.setItem('userData', JSON.stringify(userData));
+}
+
+function getDataFromForm() {
+  const newUser = new User(nameInput.value, emailInput.value);
+  userData.push(newUser);
+  saveDataToLs();
+}
+
+function getDataFromLocalSt() {
+  const dataFromLocal = JSON.parse(localStorage.getItem('userData'));
+  if (dataFromLocal) {
+    dataFromLocal.forEach((data) => {
+      nameInput.value = data.name;
+      emailInput.value = data.email;
+    });
+  }
+}
+
+form.addEventListener('submit', getDataFromForm);
+
 function loadProject() {
   projects.forEach((project) => {
     const projectLi = createMyElement('li');
@@ -250,20 +283,15 @@ function loadProject() {
     const projectUl = getMyElement('.projects');
     projectUl.appendChild(projectLi);
   });
+  getDataFromLocalSt();
 }
-
-loadProject();
-
-const form = getMyElement('form');
-const input = getMyElement('#email-input');
-const invalidH3 = getMyElement('.invalid-email');
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   const capitalLetters = [];
 
-  const emailCheck = input.value.split('');
+  const emailCheck = emailInput.value.split('');
   for (let i = 0; i < emailCheck.length; i += 1) {
     if (!/[a-z]/.test(emailCheck[i]) && /[A-Z]/.test(emailCheck[i])) {
       capitalLetters.push(emailCheck[i]);
@@ -273,6 +301,7 @@ form.addEventListener('submit', (e) => {
   function errorMessage() {
     invalidH3.textContent = 'Please enter your email in lower case';
     invalidH3.style.color = 'red';
+    emailInput.style.border = 'thin solid red';
   }
 
   function corectEmail() {
@@ -283,3 +312,5 @@ form.addEventListener('submit', (e) => {
   if (capitalLetters.length > 0) errorMessage();
   else corectEmail();
 });
+
+loadProject();
