@@ -256,10 +256,6 @@ loadProject();
 
 const form = getMyElement('form');
 const input = getMyElement('#email-input');
-const formContainer = getMyElement('.contact-form');
-const error = createMyElement('span');
-error.className = 'errorSpan';
-formContainer.appendChild(error);
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -274,8 +270,9 @@ form.addEventListener('submit', (e) => {
   }
 
   function errorMessage() {
-    error.textContent = 'Please enter your email in lowercase';
-    error.style.color = 'red';
+    const invalidH3 = getMyElement('.invalid-email')
+    invalidH3.textContent = 'Please enter your email in lowercase';
+    invalidH3.style.color = 'red';
   }
 
   function corectEmail() {

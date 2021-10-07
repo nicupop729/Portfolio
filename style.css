@@ -574,17 +574,6 @@ footer .social-media {
   display: none;
 }
 
-.contact-form {
-  position: relative;
-}
-
-.errorSpan {
-  position: absolute;
-  top: 38%;
-  left: 15%;
-  width: 100%;
-}
-
 @media only screen and (min-width: 1092px) {
   body {
     width: 97vw;
@@ -886,14 +875,4 @@ footer .social-media {
     border-radius: 5px;
   }
 
-  .contact-form {
-    position: relative;
-  }
-  
-  .errorSpan {
-    position: absolute;
-    top: 5%;
-    left: 55%;
-    width: 100%;
-  }
 }
