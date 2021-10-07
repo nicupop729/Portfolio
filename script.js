@@ -283,3 +283,5 @@ form.addEventListener('submit', (e) => {
   if (capitalLetters.length > 0) errorMessage();
   else corectEmail();
 });
+
+function preserveData(param) {}
