@@ -55,36 +55,30 @@ humbergerButton.addEventListener('click', () => {
 
 const projects = [
   {
-    name: 'Keeping track of hundreds of components',
+    name: 'To-Do list',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
+      'This project comprises a simple list of To-Do tasks. On this To-Do list, items can be added. When tasks completed, marked them as so. If you want, you can delete them.',
+    projectImg: './src/projects screenshots/to-do-list-project.jpg',
     techologies: [
-      'Codekit',
-      'GitHub',
+      'HTML',
+      'CSS',
       'JavaScript',
-      'Bootstrap',
+      'GitHub',
+      'Webpack',
+      'Jest',
       'Terminal',
-      'Codepen',
     ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+    liveVersion: 'https://to-do-list-by-nicu-pop.netlify.app/',
+    gitHubRepo: 'https://github.com/nicupop729/To-Do-list',
   },
   {
-    name: 'Multi-Post Stories',
+    name: 'Exhibition 2022 - Ancient Egypt',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
-    techologies: [
-      'Codekit',
-      'GitHub',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+      'This project is about an art Exhibition titled "Exhibition 2022 — London: Ancient Egypt" hold next year in London UK. The work was ordered by Global Exhibitions LTD UK.',
+    projectImg: './src/projects screenshots/exhibition-project.jpg',
+    techologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Terminal'],
+    liveVersion: 'https://nicupop729.github.io/Exhibition-Page/',
+    gitHubRepo: 'https://github.com/nicupop729/Exhibition-Page',
   },
   {
     name: 'Gain+Glory',
