@@ -147,7 +147,7 @@ const loadProject = (projects) => {
       <ul class="project-langs">
       
       </ul>
-      <a href="#" class="button b1">See Project</a>
+      <a href="#" class="button">See Project</a>
     </li>
     `;
     projectUl.insertAdjacentHTML('beforeend', textHtml);

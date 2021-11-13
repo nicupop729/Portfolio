@@ -191,6 +191,7 @@ ul {
 
 .project {
   margin-top: 15px;
+  margin-bottom: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,7 +239,8 @@ ul {
   white-space: nowrap;
 }
 
-.button:link {
+.button:link,
+.button:visited {
   width: 122px;
   height: 48px;
   background: #36b37f;
@@ -253,25 +255,24 @@ ul {
   transition: background-color 0.2s, color 0.2s;
 }
 
-.button:visited {
-  background-color: #008552;
-  color: #fff;
-}
-
-.button:hover {
-  background-color: #36b37f;
-  color: #fff;
-}
-
+.button:hover,
 .button:active {
   background-color: #008552;
   color: #fff;
 }
 
+.btn-resume:link {
+  margin-top: 30px;
+  width: 200px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-me {
   background-image: url(./src/resources/illustration-about-me-mobile.png);
   background-repeat: repeat-y;
-  margin-top: 30px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -284,36 +285,6 @@ ul {
   justify-content: center;
   align-items: center;
   margin-bottom: 35px;
-}
-
-.b7:link {
-  margin-top: 30px;
-  width: 200px;
-  height: 48px;
-  background: #36b37f;
-  color: #fff;
-  border-radius: 4px;
-  border: none;
-  font-size: 20px;
-  text-decoration: none;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
-.b7:visited {
-  background-color: #008552;
-  color: #fff;
-}
-
-.b7:hover {
-  background-color: #36b37f;
-  color: #fff;
-}
-
-.b7:active {
-  background-color: #008552;
-  color: #fff;
 }
 
 .experience-ul {
@@ -417,10 +388,11 @@ form textarea {
   border-color: #36b37f;
 }
 
-form button:enabled {
+form button:enabled,
+form button:visited {
   height: 40px;
   width: 120px;
-  background-color: #3eb380;
+  background-color: #36b37f;
   border-radius: 5px;
   border: none;
   color: #fff;
@@ -428,18 +400,13 @@ form button:enabled {
   font-size: 17px;
   line-height: 24px;
   margin-bottom: 5px;
+  cursor: pointer;
 }
 
-form button:visited {
-  background-color: #008552;
-}
-
-form button:hover {
-  background-color: #36b37f;
-}
-
+form button:hover,
 form button:active {
   background-color: #008552;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .contact-form a {
@@ -667,6 +634,8 @@ footer .social-media {
   }
 
   .project {
+    margin-top: 0;
+    margin-bottom: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -675,6 +644,27 @@ footer .social-media {
     border: 0.5px solid rgba(124, 124, 124, 0.356);
     border-radius: 8px;
     height: 474px;
+  }
+
+  .project:nth-child(3n-2):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: -5px 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .project:nth-child(3n-1):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .project:nth-child(3n):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888;
+    transition: box-shadow 0.2s;
   }
 
   .project-img {
@@ -722,6 +712,7 @@ footer .social-media {
 
   .experience {
     width: fit-content;
+    padding-bottom: 50px;
     grid-gap: 20px;
     display: flex;
     flex-direction: column;
@@ -739,6 +730,27 @@ footer .social-media {
   .experience:first-child .logo {
     padding-top: 0;
     height: 153px;
+  }
+
+  .experience:nth-child(3n-2):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: -5px 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .experience:nth-child(3n-1):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .experience:nth-child(3n):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888;
+    transition: box-shadow 0.2s;
   }
 
   .experience-list {
