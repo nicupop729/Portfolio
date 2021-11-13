@@ -41,12 +41,13 @@ ul {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 70vw;
   height: 100%;
   z-index: 1;
   padding-top: 40px;
   color: #3a4a42;
   overflow-x: hidden;
+  border-right: 5px solid green;
 }
 
 .toggle-nav ul {
@@ -65,11 +66,15 @@ ul {
   cursor: pointer;
 }
 
-#closeIcon-id {
-  float: right;
+#close-icon-id {
+  position: absolute;
+  top: 12px;
+  right: 0;
   padding-right: 5%;
   border: 2px solid #fff;
   cursor: pointer;
+  font-size: 40px;
+  color: green;
 }
 
 .header-elem {
@@ -448,6 +453,10 @@ form button:active {
   margin-top: 5px;
 }
 
+.invalid-email {
+  text-align: center;
+}
+
 .bottom-bar {
   margin-top: 150px;
   height: 4px;
@@ -654,12 +663,13 @@ footer .social-media {
     grid-template-rows: 1fr 1fr;
     grid-gap: 50px 20px;
     margin-top: 50px;
+    max-width: 1095.91px;
   }
 
   .project {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
     border: 0.5px solid rgba(124, 124, 124, 0.356);
@@ -679,13 +689,22 @@ footer .social-media {
   .project-langs {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-    flex: 1 1 auto;
-    margin-bottom: 15px;
+    align-items: center;
+    margin-bottom: 0;
+    margin-top: 0;
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .project-lang {
     flex: 0 1 auto;
+    padding: 10px;
+    margin-bottom: 0;
+    color: #3a4a42;
+    order: 0;
+    border-radius: 8px;
+    background-color: #ebf0ee;
+    white-space: nowrap;
   }
 
   .about-me {
