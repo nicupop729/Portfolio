@@ -803,8 +803,8 @@ footer .social-media {
     align-items: center;
     background-color: white;
     width: 920px;
-    height: 1083px;
     margin: 0 auto 10px auto;
+    padding: 50px 10px 20px;
   }
 
   .pop-up-img-div {
@@ -879,8 +879,8 @@ footer .social-media {
   .close-pop-up {
     display: inline-block;
     position: absolute;
-    top: 27px;
-    right: 50px;
+    top: 15px;
+    right: 20px;
     font-size: 20px;
     height: 35px;
     width: 35px;
