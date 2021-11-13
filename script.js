@@ -171,6 +171,7 @@ const clickForPopUp = (projects) => {
   projectBtn.forEach((btn, i) => {
     btn.addEventListener(
       'click',
+      // eslint-disable-next-line no-undef
       (displayPopUp = () => {
         const textHtml = `
         <div class="pop-up-div">
@@ -219,8 +220,6 @@ const clickForPopUp = (projects) => {
         const popUpDiv = document.querySelector('.pop-up-div');
         popUpDiv.style.display = 'block';
 
-        console.log(popUpDiv);
-
         const displayTechPopUp = (projects) => {
           const techologList = document.querySelector('.pop-up-mobile-langs');
           projects[i].techologies.forEach((tech) => {
@@ -234,11 +233,10 @@ const clickForPopUp = (projects) => {
         displayTechPopUp(projects);
         const closePopUp = document.querySelector('.close-pop-up');
         closePopUp.addEventListener('click', () => {
-          console.log(closePopUp);
           popUpDiv.style.display = 'none';
           window.location.reload();
         });
-      })
+      }),
     );
   });
 };

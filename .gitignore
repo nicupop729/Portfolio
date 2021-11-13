@@ -1,4 +1,8 @@
 node_modules
 .prettierrc
 .eslintrc.json
+.hintrc
+package-lock.json
+package.json
+.eslintrc.json
 .stylelintrc.json
