@@ -2,22 +2,21 @@
 
 # Portfolio
 
-> This is the personal Portfolio of Nicolae Pop - Web Developer
+> This is my portfolio website revealing my skills and projects. Built with HTML, CSS and Javascript.
 
 ![screenshot](./src/resources/Portofolio-first-page.jpg)
 
-Additional description about the project and its features.
-
 ## Built With
 
-- HTML
-- CSS
-- Javascript
-- Git & GitHub
+- Major languages: HTML & CSS along with JavaScript
+- Frameworks: Vanilla JavaScript;
+- Technologies used: Terminal, GitHub
 
 ## Live Demo
 
-[Live Demo Link](https://nicupop729.github.io/Web_Developer_Portfolio/)
+[Live Demo Link - GitHubPages](https://nicupop729.github.io/Portfolio/)<br />
+
+[Live Demo Link - netlify](https://portfolio-nicolae-pop.netlify.app)
 
 👤 **Nicolae Pop**
 
@@ -25,9 +24,19 @@ Additional description about the project and its features.
 - Twitter: [@nicupop729](https://twitter.com/nicupop729)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/nicolae-pop/)
 
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/nicupop729/Portfolio/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
 ## Acknowledgments
 
-This Portfolio Project was build using Figma templates under continuous supervision of Microverse team!!
+This Portfolio Project was build using Figma templates.
 
 ## 📝 License
 
