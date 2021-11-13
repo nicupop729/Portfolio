@@ -1,64 +1,62 @@
-const getMyElement = (param) => document.querySelector(param);
-
-const createMyElement = (param) => document.createElement(param);
-
-const form = getMyElement('form');
-const emailInput = getMyElement('#email-input');
-const nameInput = getMyElement('#name-input');
-const invalidH3 = getMyElement('.invalid-email');
-const menuDiv = createMyElement('div');
-menuDiv.className = 'toggle-nav';
-const menuUl = createMyElement('ul');
-const menuPortfolio = createMyElement('li');
-menuPortfolio.textContent = 'Portfolio';
-const menuAbout = createMyElement('li');
-menuAbout.textContent = 'About';
-const menuContact = createMyElement('li');
-menuContact.textContent = 'Contact';
-const closeIcon = createMyElement('span');
-closeIcon.textContent = 'X';
-closeIcon.id = 'closeIcon-id';
-
-menuUl.appendChild(menuPortfolio);
-menuUl.appendChild(menuAbout);
-menuUl.appendChild(menuContact);
-
-menuDiv.appendChild(closeIcon);
-menuDiv.appendChild(menuUl);
-
-const humbergerButton = getMyElement('.menu-icon');
-
-menuPortfolio.addEventListener('click', () => {
-  menuDiv.style.display = 'none';
-  document.location = '#portfolio';
-});
-
-menuAbout.addEventListener('click', () => {
-  menuDiv.style.display = 'none';
-  document.location = '#about';
-});
-
-menuContact.addEventListener('click', () => {
-  menuDiv.style.display = 'none';
-  document.location = '#contact';
-});
-
-closeIcon.addEventListener('click', () => {
-  menuDiv.style.display = 'none';
-});
+const projectUl = document.querySelector('.projects');
+const humbergerButton = document.querySelector('.menu-icon');
+const form = document.querySelector('form');
+const emailInput = document.querySelector('#email-input');
+const nameInput = document.querySelector('#name-input');
+const invalidH3 = document.querySelector('.invalid-email');
 
 humbergerButton.addEventListener('click', () => {
-  document.body.appendChild(menuDiv);
+  const textHTML = `
+  <div
+  class="toggle-nav"
+ >
+  <span id="close-icon-id">
+    <ion-icon name="close-outline"></ion-icon>
+  </span>
+  <ul>
+    <li id="portf-mob-nav">Portfolio</li>
+    <li id="ab-mob-nav">About</li>
+    <li id="cont-mob-nav">Contact</li>
+  </ul>
+</div>
+  `;
+  document.body.insertAdjacentHTML('afterbegin', textHTML);
+
+  const menuDiv = document.querySelector('.toggle-nav');
+  const closeIcon = document.querySelector('#close-icon-id');
+  const menuPortfolio = document.querySelector('#portf-mob-nav');
+  const menuAbout = document.querySelector('#ab-mob-nav');
+  const menuContact = document.querySelector('#cont-mob-nav');
+
   menuDiv.style.backgroundColor = '#fff';
   menuDiv.style.display = 'block';
+
+  closeIcon.addEventListener('click', () => {
+    menuDiv.style.display = 'none';
+  });
+
+  menuPortfolio.addEventListener('click', () => {
+    menuDiv.style.display = 'none';
+    document.location = '#portfolio';
+  });
+
+  menuAbout.addEventListener('click', () => {
+    menuDiv.style.display = 'none';
+    document.location = '#about';
+  });
+
+  menuContact.addEventListener('click', () => {
+    menuDiv.style.display = 'none';
+    document.location = '#contact';
+  });
 });
 
 const projects = [
   {
     name: 'To-Do list',
     description:
-      'This project comprises a simple list of To-Do tasks. On this To-Do list, items can be added. When tasks completed, marked them as so. If you want, you can delete them.',
-    projectImg: './src/projects screenshots/to-do-list-project.jpg',
+      'This project comprises a simple list of To-Do tasks. On this To-Do list, items can be added. When tasks completed, marked them as so. If you want, you can edit or delete them.',
+    projectImg: './src/projects-screenshots/to-do-list-project.jpg',
     techologies: [
       'HTML',
       'CSS',
@@ -72,85 +70,184 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/To-Do-list',
   },
   {
-    name: 'Exhibition 2022 - Ancient Egypt',
+    name: 'Awesome Books',
+    description:
+      'A basic website built using HTML, CSS and JavaScript that allows users to add and remove awesome books to or from a list',
+    projectImg: './src/projects-screenshots/awesome-books.jpg',
+    techologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'GitHub',
+      'Terminal',
+      'Local Storage',
+    ],
+    liveVersion: 'https://codepantherr.github.io/Awesome-Books/',
+    gitHubRepo: 'https://github.com/codepantherr/Awesome-Books',
+  },
+  {
+    name: 'Leaderboard for Game Snake',
+    description:
+      'The leaderboard website displays scores submitted by different players. It also allows you to submit your score. The leaderboard website displays scores submitted by different players. It also allows you to submit your score.',
+    projectImg: './src/projects-screenshots/leaderboard.jpg',
+    techologies: [
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'GitHub',
+      'Webpack',
+      'Terminal',
+      'GitFlow',
+      'API',
+    ],
+    liveVersion: 'https://leaderboard-snake-game.netlify.app/',
+    gitHubRepo: 'https://github.com/nicupop729/Leaderboard',
+  },
+  {
+    name: 'Exhibition - Ancient Egypt',
     description:
       'This project is about an art Exhibition titled "Exhibition 2022 — London: Ancient Egypt" hold next year in London UK. The work was ordered by Global Exhibitions LTD UK.',
-    projectImg: './src/projects screenshots/exhibition-project.jpg',
+    projectImg: './src/projects-screenshots/exhibition-project.jpg',
     techologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Terminal'],
     liveVersion: 'https://nicupop729.github.io/Exhibition-Page/',
     gitHubRepo: 'https://github.com/nicupop729/Exhibition-Page',
   },
   {
-    name: 'Gain+Glory',
+    name: 'Exhibition - Ancient Egypt',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
-    techologies: [
-      'Codekit',
-      'GitHub',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+      'This project is about an art Exhibition titled "Exhibition 2022 — London: Ancient Egypt" hold next year in London UK. The work was ordered by Global Exhibitions LTD UK.',
+    projectImg: './src/projects-screenshots/exhibition-project.jpg',
+    techologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Terminal'],
+    liveVersion: 'https://nicupop729.github.io/Exhibition-Page/',
+    gitHubRepo: 'https://github.com/nicupop729/Exhibition-Page',
   },
   {
-    name: 'Hundreds of components',
+    name: 'Exhibition - Ancient Egypt',
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
-    techologies: [
-      'Codekit',
-      'GitHub',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
-  },
-  {
-    name: 'Multi-Post',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
-    techologies: [
-      'Codekit',
-      'GitHub',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
-  },
-  {
-    name: 'Glory',
-    description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea",
-    projectImg: './src/resources/Snapshoot-Portfolio.png',
-    techologies: [
-      'Codekit',
-      'GitHub',
-      'JavaScript',
-      'Bootstrap',
-      'Terminal',
-      'Codepen',
-    ],
-    liveVersion: 'https://nicupop729.github.io/Web_Developer_Portfolio/',
-    gitHubRepo: 'https://github.com/nicupop729/Web_Developer_Portfolio',
+      'This project is about an art Exhibition titled "Exhibition 2022 — London: Ancient Egypt" hold next year in London UK. The work was ordered by Global Exhibitions LTD UK.',
+    projectImg: './src/projects-screenshots/exhibition-project.jpg',
+    techologies: ['HTML', 'CSS', 'JavaScript', 'GitHub', 'Terminal'],
+    liveVersion: 'https://nicupop729.github.io/Exhibition-Page/',
+    gitHubRepo: 'https://github.com/nicupop729/Exhibition-Page',
   },
 ];
 
+const loadProject = (projects) => {
+  projects.forEach((project) => {
+    const textHtml = `
+    <li class="project">
+      <div class="project-img">
+        <img
+          class="img"
+          src="${project.projectImg}"
+          alt="image placeholder"
+        />
+      </div>
+      <h3 class="project-title">${project.name}</h3>
+      <ul class="project-langs">
+      
+      </ul>
+      <a href="#" class="button b1">See Project</a>
+    </li>
+    `;
+    projectUl.insertAdjacentHTML('beforeend', textHtml);
+  });
+};
+
+const displayTech = (projects) => {
+  const techologList = [...document.querySelectorAll('.project-langs')];
+  projects.forEach((project, i) => {
+    project.techologies.forEach((tech) => {
+      const textHtml = `
+             <li class="project-lang">${tech}</li>
+            `;
+      techologList[i].insertAdjacentHTML('beforeend', textHtml);
+    });
+  });
+};
+
+const clickForPopUp = (projects) => {
+  const projectBtn = [...document.querySelectorAll('.button')];
+  projectBtn.forEach((btn, i) => {
+    btn.addEventListener(
+      'click',
+      // eslint-disable-next-line no-undef
+      (displayPopUp = () => {
+        const textHtml = `
+        <div class="pop-up-div">
+          <div class="inner-pop-up-div">
+            <div class="pop-up-img-div">
+              <img
+                class="pop-up-img"
+                src="${projects[i].projectImg}"
+              />
+            </div>
+            <div class="cont-div">
+              <h3 class="cont-title">${projects[i].name}</h3>
+              <div class="tech-list-div">
+                <ul class="project-langs pop-up-mobile-langs">
+                
+                </ul>
+              </div>
+              <div class="btn-div">
+                <a
+                  class="button popUpBtn"
+                  href="${projects[i].gitHubRepo}"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  See source
+                </a>
+                <a
+                  class="button popUpBtn"
+                  href="${projects[i].liveVersion}"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  See live
+                </a>
+              </div>
+            </div>
+            <p class="pop-up-desc">
+              ${projects[i].description}
+            </p>
+            <span class="close-pop-up"><ion-icon name="close-outline"></ion-icon></span>
+          </div>
+        </div>;
+        `;
+        document.body.insertAdjacentHTML('beforebegin', textHtml);
+
+        const popUpDiv = document.querySelector('.pop-up-div');
+        popUpDiv.style.display = 'block';
+
+        const displayTechPopUp = (projects) => {
+          const techologList = document.querySelector('.pop-up-mobile-langs');
+          projects[i].techologies.forEach((tech) => {
+            const textHtml = `
+            <li class="project-lang pop-up-tech-langs">${tech}</li>
+                `;
+            techologList.insertAdjacentHTML('beforeend', textHtml);
+          });
+        };
+
+        displayTechPopUp(projects);
+        const closePopUp = document.querySelector('.close-pop-up');
+        closePopUp.addEventListener('click', () => {
+          popUpDiv.style.display = 'none';
+          window.location.reload();
+        });
+      }),
+    );
+  });
+};
+
 const userData = [];
 
-function User(name, email) {
-  this.name = name;
-  this.email = email;
+class User {
+  constructor(name, email) {
+    this.name = name;
+    this.email = email;
+  }
 }
 
 function saveDataToLs() {
@@ -159,6 +256,7 @@ function saveDataToLs() {
 
 function getDataFromForm() {
   const newUser = new User(nameInput.value, emailInput.value);
+  userData.length = 0;
   userData.push(newUser);
   saveDataToLs();
 }
@@ -175,111 +273,6 @@ function getDataFromLocalSt() {
 
 form.addEventListener('submit', getDataFromForm);
 
-function loadProject() {
-  projects.forEach((project) => {
-    const projectLi = createMyElement('li');
-    projectLi.className = 'project';
-    const imageDiv = createMyElement('div');
-    imageDiv.classList.add('project-img');
-
-    projectLi.appendChild(imageDiv);
-    const projectImage = createMyElement('img');
-    projectImage.className = 'img';
-    projectImage.src = project.projectImg;
-    imageDiv.appendChild(projectImage);
-    const projectH3 = createMyElement('h3');
-    projectH3.textContent = project.name;
-    projectH3.className = 'project-title';
-    const innerUl = createMyElement('ul');
-    innerUl.className = 'project-langs';
-
-    const projectBtn = createMyElement('a');
-    projectBtn.className = 'button';
-    projectBtn.href = '#';
-    projectBtn.textContent = 'See Project';
-
-    for (let i = 0; i < project.techologies.length - 2; i += 1) {
-      const innerLi = createMyElement('li');
-      innerLi.className = 'project-lang';
-      innerLi.textContent = project.techologies[i];
-      innerUl.appendChild(innerLi);
-    }
-    projectLi.appendChild(imageDiv);
-    projectLi.appendChild(projectH3);
-    projectLi.appendChild(innerUl);
-    projectLi.appendChild(projectBtn);
-
-    projectBtn.addEventListener('click', () => {
-      const popUpDiv = createMyElement('div');
-      popUpDiv.className = 'pop-up-div';
-      const innerPopUpDiv = createMyElement('div');
-      innerPopUpDiv.className = 'inner-pop-up-div';
-      const popUpImgDiv = createMyElement('div');
-      popUpImgDiv.className = 'pop-up-img-div';
-      const popUpImg = createMyElement('img');
-      popUpImg.className = 'pop-up-img';
-      popUpImg.src = project.projectImg;
-      const popUpContDiv = createMyElement('div');
-      popUpContDiv.className = 'cont-div';
-      const contTitle = createMyElement('h3');
-      contTitle.className = 'cont-title';
-      contTitle.textContent = project.name;
-      const techListDiv = createMyElement('div');
-      techListDiv.className = 'tech-list-div';
-      const techUl = createMyElement('ul');
-      techUl.className = 'project-langs pop-up-mobile-langs';
-      const btnDiv = createMyElement('div');
-      btnDiv.className = 'btn-div';
-      const popUpBtn = createMyElement('a');
-      popUpBtn.className = 'button popUpBtn';
-      popUpBtn.textContent = 'See live';
-      popUpBtn.href = project.liveVersion;
-
-      const popUpRepoBtn = createMyElement('a');
-      popUpRepoBtn.className = 'button popUpBtn';
-      popUpRepoBtn.textContent = 'See source';
-      popUpRepoBtn.href = project.gitHubRepo;
-
-      const popUpDesc = createMyElement('p');
-      popUpDesc.className = 'pop-up-desc';
-      popUpDesc.textContent = project.description;
-      const closePopUp = createMyElement('span');
-      closePopUp.className = 'close-pop-up';
-      closePopUp.textContent = 'x';
-      popUpDiv.style.display = 'block';
-
-      for (let i = 0; i < project.techologies.length; i += 1) {
-        const innerLi = createMyElement('li');
-        innerLi.className = 'project-lang pop-up-tech-langs';
-        innerLi.textContent = project.techologies[i];
-        techUl.appendChild(innerLi);
-      }
-
-      btnDiv.appendChild(popUpRepoBtn);
-      btnDiv.appendChild(popUpBtn);
-      techListDiv.appendChild(techUl);
-      popUpImgDiv.appendChild(popUpImg);
-      innerPopUpDiv.appendChild(popUpImgDiv);
-      popUpContDiv.appendChild(contTitle);
-      popUpContDiv.appendChild(techListDiv);
-      popUpContDiv.appendChild(btnDiv);
-      innerPopUpDiv.appendChild(popUpContDiv);
-      innerPopUpDiv.appendChild(popUpDesc);
-      innerPopUpDiv.appendChild(closePopUp);
-      popUpDiv.appendChild(innerPopUpDiv);
-      document.body.appendChild(popUpDiv);
-
-      closePopUp.addEventListener('click', () => {
-        popUpDiv.style.display = 'none';
-      });
-    });
-
-    const projectUl = getMyElement('.projects');
-    projectUl.appendChild(projectLi);
-  });
-  getDataFromLocalSt();
-}
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -294,8 +287,13 @@ form.addEventListener('submit', (e) => {
 
   function errorMessage() {
     invalidH3.textContent = 'Please enter your email in lower case';
+    invalidH3.style.display = 'block';
     invalidH3.style.color = 'red';
     emailInput.style.border = 'thin solid red';
+    setTimeout(() => {
+      invalidH3.style.display = 'none';
+      emailInput.style.border = '1px solid #d0d9d4';
+    }, 3000);
   }
 
   function corectEmail() {
@@ -307,4 +305,9 @@ form.addEventListener('submit', (e) => {
   else corectEmail();
 });
 
-loadProject();
+window.onload = () => {
+  loadProject(projects);
+  displayTech(projects);
+  clickForPopUp(projects);
+  getDataFromLocalSt();
+};
