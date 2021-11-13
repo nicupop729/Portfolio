@@ -649,21 +649,21 @@ footer .social-media {
   .project:nth-child(3n-2):hover {
     border: 1px solid;
     padding: 10px;
-    box-shadow: -5px 10px #888888;
+    box-shadow: -5px 10px #888;
     transition: box-shadow 0.2s;
   }
 
   .project:nth-child(3n-1):hover {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 0 10px #888888;
+    box-shadow: 0 10px #888;
     transition: box-shadow 0.2s;
   }
 
   .project:nth-child(3n):hover {
     border: 1px solid;
     padding: 10px;
-    box-shadow: 5px 10px #888888;
+    box-shadow: 5px 10px #888;
     transition: box-shadow 0.2s;
   }
 
@@ -721,27 +721,6 @@ footer .social-media {
     height: 100%;
   }
 
-  .experience:nth-child(3n-2):hover {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: -5px 10px #888888;
-    transition: box-shadow 0.2s;
-  }
-
-  .experience:nth-child(3n-1):hover {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 0 10px #888888;
-    transition: box-shadow 0.2s;
-  }
-
-  .experience:nth-child(3n):hover {
-    border: 1px solid;
-    padding: 10px;
-    box-shadow: 5px 10px #888888;
-    transition: box-shadow 0.2s;
-  }
-
   .experience:first-child {
     margin-right: 0;
     display: flex;
@@ -751,6 +730,27 @@ footer .social-media {
   .experience:first-child .logo {
     padding-top: 0;
     height: 153px;
+  }
+
+  .experience:nth-child(3n-2):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: -5px 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .experience:nth-child(3n-1):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 0 10px #888;
+    transition: box-shadow 0.2s;
+  }
+
+  .experience:nth-child(3n):hover {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #888;
+    transition: box-shadow 0.2s;
   }
 
   .experience-list {
