@@ -602,17 +602,23 @@ footer .social-media {
     gap: 65px;
   }
 
-  .desktop-nav li a:link {
+  .desktop-nav li a:link,
+  .desktop-nav li a:visited {
     text-decoration: none;
     cursor: pointer;
     color: #344563;
     font-weight: 600;
     font-size: 15px;
     line-height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease;
   }
 
-  .desktop-nav li a:visited {
-    color: #344563;
+  .desktop-nav li a:hover,
+  .desktop-nav li a:active {
+    background-color: #36b37e;
+    color: #fff;
   }
 
   .parag {
