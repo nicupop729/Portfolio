@@ -70,6 +70,23 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/To-Do-list',
   },
   {
+    name: 'To-Do List App - with React',
+    description:
+      'In this app, you can add, delete, submit and edit items. To edit items, simply double click on them. Once you are done, press the enter key to resubmit. This app will persist your data in the browser local storage. So whether you reload, close your app or reopen it, you still have access to your to-dos items.',
+    projectImg: './src/projects-screenshots/to-do-list-app-react.png',
+    techologies: [
+      'JavaScript',
+      'React',
+      'React-thunk',
+      'Redux',
+      'CSS',
+      'GitHub',
+      'GitFlow',
+    ],
+    liveVersion: 'https://nicupop729.github.io/to-do-app-with-react',
+    gitHubRepo: 'https://github.com/nicupop729/space-travellers-hub',
+  },
+  {
     name: 'Awesome Books',
     description:
       'A basic website built using HTML, CSS and JavaScript that allows users to add and remove awesome books to or from a list',
@@ -131,22 +148,22 @@ const projects = [
     gitHubRepo: 'https://github.com/nicupop729/Three-Pizza-Guyzz-JS-Capstone',
   },
   {
-    name: 'Three Pizza Guyzz',
+    name: "Space Travellers' Hub",
     description:
-      'This website comprises a pizza restaurant menu of Three Pizza Guyzz Restaurant. Inspired by the best pizza recipes from the internet and by not claiming the recipes as their one, they share them with the users, to give them the possibility to bake their pizza at home. If internet users want to become customers, they can reserve a particular pizza for a few days, and the restaurant takes the responsibility that after the moment the customer arrives at the spot, the pizza will be ready in a maximum of 15 minutes.',
-    projectImg: './src/projects-screenshots/Three-Pizza-Guyzz.jpg',
+      'This application works with real live data from the SpaceX API. It was built for a company that provides commercial and scientific space travel services. It allows users to book rockets and join selected space missions. The Rockets section displays a list of all available SpaceX rockets. Users can book each rocket by clicking the reservation button or cancel the previously made booking. The Missions section displays a list of current missions along with their brief description and participation status. There is also a button next to each mission that allows users to join the selected mission or leave the mission the user joined earlier.',
+    projectImg: './src/projects-screenshots/travellers-hub-home-page.png',
     techologies: [
-      'HTML',
-      'CSS',
       'JavaScript',
+      'React',
+      'React-thunk',
+      'Redux',
+      'CSS',
       'GitHub',
-      'Webpack',
       'Jest-test',
       'GitFlow',
-      'Terminal',
     ],
-    liveVersion: 'https://three-pizza-guyzz.netlify.app/',
-    gitHubRepo: 'https://github.com/nicupop729/Three-Pizza-Guyzz-JS-Capstone',
+    liveVersion: 'https://space-travellers-hub-react-redux.netlify.app/',
+    gitHubRepo: 'https://github.com/nicupop729/space-travellers-hub',
   },
 ];
 
