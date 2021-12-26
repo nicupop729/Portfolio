@@ -165,6 +165,24 @@ const projects = [
     liveVersion: 'https://space-travellers-hub-react-redux.netlify.app/',
     gitHubRepo: 'https://github.com/nicupop729/space-travellers-hub',
   },
+  {
+    name: 'World Countries',
+    description:
+      'Fetching data from REST COUNTRIES API, this app (mobile version for now) gives informations like area, population, capital, and borders for 195 countries from seven continents.',
+    projectImg: './src/projects-screenshots/countries-world.png',
+    techologies: [
+      'JavaScript',
+      'React',
+      'React-thunk',
+      'Redux',
+      'CSS',
+      'GitHub',
+      'Jest-test',
+      'GitFlow',
+    ],
+    liveVersion: 'https://world-countries-react-redux.netlify.app/',
+    gitHubRepo: 'https://github.com/nicupop729/world-countries--react-capstone',
+  },
 ];
 
 const loadProject = (projects) => {
