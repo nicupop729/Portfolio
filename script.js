@@ -53,40 +53,6 @@ humbergerButton.addEventListener('click', () => {
 
 const projects = [
   {
-    name: 'To-Do list',
-    description:
-      'This project comprises a simple list of To-Do tasks. On this To-Do list, items can be added. When tasks completed, marked them as so. If you want, you can edit or delete them.',
-    projectImg: './src/projects-screenshots/to-do-list-project.jpg',
-    techologies: [
-      'HTML',
-      'CSS',
-      'JavaScript',
-      'GitHub',
-      'Webpack',
-      'Jest',
-      'Terminal',
-    ],
-    liveVersion: 'https://to-do-list-by-nicu-pop.netlify.app/',
-    gitHubRepo: 'https://github.com/nicupop729/To-Do-list',
-  },
-  {
-    name: 'To-Do List App - with React',
-    description:
-      'In this app, you can add, delete, submit and edit items. To edit items, simply double click on them. Once you are done, press the enter key to resubmit. This app will persist your data in the browser local storage. So whether you reload, close your app or reopen it, you still have access to your to-dos items.',
-    projectImg: './src/projects-screenshots/to-do-list-app-react.png',
-    techologies: [
-      'JavaScript',
-      'React',
-      'React-thunk',
-      'Redux',
-      'CSS',
-      'GitHub',
-      'GitFlow',
-    ],
-    liveVersion: 'https://nicupop729.github.io/to-do-app-with-react',
-    gitHubRepo: 'https://github.com/nicupop729/space-travellers-hub',
-  },
-  {
     name: 'Awesome Books',
     description:
       'A basic website built using HTML, CSS and JavaScript that allows users to add and remove awesome books to or from a list',
